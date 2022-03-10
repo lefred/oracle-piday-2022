@@ -1,0 +1,3 @@
+db.devices.find()
+
+db.humidity_history.select().orderBy("id desc").limit(10)

@@ -1,0 +1,12 @@
+[Unit]
+Description=Sending DHT22 metrics from Raspberry Pi to MySQL Database Service
+After=network.target
+
+[Service]
+Type=simple
+User=root
+Restart=on-failure
+ExecStart=/usr/bin/python /opt/PiDayMySQL/metrics_to_MySQL.py %s
+
+[Install]
+WantedBy=multi-user.target
